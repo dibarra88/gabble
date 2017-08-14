@@ -8,7 +8,7 @@ function createUser(username, email, password, image, done) {
 
     conn.query(sql, [username, email, hash, image], function (error, results, fields) {
         if (error) {
-            console.log('trying to create a duplicate user', error)
+            console.log('Error trying to create a duplicate user', error)
             done(false,error)
         }
         else if (!error) {

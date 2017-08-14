@@ -87,7 +87,6 @@ app.use('/post', homepage);
 app.use('/delete', homepage);
 app.use('/like', homepage);
 app.get('/logout', function(req, res, next){
-  console.log('inside this logout')
   req.logout();
   res.redirect('/');
 })
